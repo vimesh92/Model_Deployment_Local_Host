@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Loan Predictor</title>
+</head>
+<body>
+ <h1>Input values:</h1>
+<form action="{{ url_for('predict') }}" method="post">
+     
+        <h2>ApplicantIncome</h2>
+<br><input name='ApplicantIncome' type="number" required> 
+<br>
+	<h2>CoapplicantIncome</h2>
+<br><input name= 'CoapplicantIncome'  type="number" required>
+<br>
+	<h2>LoanAmount</h2>
+<br><input name= 'LoanAmount'  type="number" required>
+<br>
+	<h2>Loan_Amount_Term</h2>
+<br><input name= Loan_Amount_Term  type="number" required>
+<br>
+<br>
+<br>
+	<button type="submit" class="btn btn-primary btn-block btn-large">Loan Status</button>
+
+	<h2> Loan Status: {{ result }} </h2>
+</form>
+</body>
+</html>
